@@ -44,3 +44,39 @@ printMessage('Mój ruch to: ' + computerMove);
     printMessage('Twój ruch to: ' + playerMove);
     
     //printMessage(Math.random());
+if( randomNumber =='1' && playerInput == '2'){
+    printMessage('Ty wygrywasz!');
+}
+if( randomNumber =='2' && playerInput == '3'){
+    printMessage('Ty wygrywasz!');
+}
+if( randomNumber == '3' && playerInput == '1'){
+    printMessage('Ty wygrywasz!');
+}
+if( randomNumber =='2' && playerInput == '1'){
+    printMessage('Przegrałeś, spróbuj jeszcze raz!');
+}
+if(randomNumber =='3' && playerInput == '2'){
+    printMessage('Przegrałeś, spróbuj jeszcze raz!');
+}
+if(randomNumber =='1' && playerInput == '3'){
+    printMessage('Przegrałeś, spróbuj jeszcze raz!');
+}
+if(randomNumber =='3' && playerInput == '3'){
+    printMessage('Remis, spróbuj jeszcze raz :D');
+}
+if(randomNumber =='1' && playerInput == '1'){
+    printMessage('Remis, spróbuj jeszcze raz :D');
+}
+if(randomNumber =='2' && playerInput == '2'){
+    printMessage('Remis, spróbuj jeszcze raz :D');
+}
+if(randomNumber =='1' && playerInput == 'nieznany ruch'){
+    printMessage('Nieznany ruch');
+}
+if(randomNumber =='2' && playerInput == 'nieznany ruch'){
+    printMessage('Nieznany ruch');
+}
+if(randomNumber =='3' && playerInput == 'nieznany ruch'){
+    printMessage('Nieznany ruch');
+}
