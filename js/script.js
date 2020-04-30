@@ -13,8 +13,19 @@
 
     let randomNumber = Math.floor(Math.random() * 3 + 1);
     console.log( 'Wylosowana liczba to:' + randomNumber);
-    let computerMove = 'nieznany ruch';
-    if(randomNumber == 1){
+    function getMoveName(argMoveId){
+        if(argMoveId == 2){
+            return 'papier';
+        }
+        if(argMoveId == 1){
+            return 'kamień';
+        }
+        if(argMoveId == 3){
+            return 'obcęgi';
+        }
+    }
+   let computerMove = getMoveName(randomNumber);
+    /*if(randomNumber == 1){
         computerMove = 'kamień';
     }
     if(randomNumber == 2){
@@ -22,15 +33,19 @@
     }
     if(randomNumber == 3){
         computerMove = 'obcęgi';
-    }
-printMessage('Mój ruch to: ' + computerMove);
+    }*/
+
+    printMessage('Mój ruch to: ' + computerMove);
+    
 
  
 
     let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: obcęgi');
+    
     console.log('Gracz wpisał: ' + playerInput);
-    let playerMove = 'Nieznany ruch';
-    if(playerInput == '1'){
+   
+    let playerMove = getMoveName(playerInput);
+    /*if(playerInput == '1'){
         playerMove = 'kamień';
     }
     if(playerInput == '2'){
@@ -39,12 +54,56 @@ printMessage('Mój ruch to: ' + computerMove);
     }
     if(playerInput == '3'){
         playerMove = 'obcęgi';
-    }
+    }*/
     
     printMessage('Twój ruch to: ' + playerMove);
+
     
+       function displayResult(agrComputerMove , agrPlayerMove){
+           console.log('funkcja displayResult się uruchomiła');
+        
+        printMessage('Zagrałem ' + agrComputerMove + ', a Ty ' + agrPlayerMove);
+        if( agrComputerMove =='kamień' && agrPlayerMove == 'papier'){
+            printMessage('Ty wygrywasz!');         
+        }
+        if( agrComputerMove =='papier' && agrPlayerMove == 'obcęgi'){
+        printMessage('Ty wygrywasz!');
+        }
+        if( agrComputerMove == 'obcęgi' && agrPlayerMove == 'kamień'){
+            printMessage('Ty wygrywasz!');
+        }
+        if( agrComputerMove =='papier' && agrPlayerMove == 'kamień'){
+            printMessage('Przegrałeś, spróbuj jeszcze raz!');
+        }
+        if(agrComputerMove =='obcęgi' && agrPlayerMove == 'papier'){
+            printMessage('Przegrałeś, spróbuj jeszcze raz!');
+        }
+        if(agrComputerMove =='kamień' && agrPlayerMove == 'obcęgi'){
+            printMessage('Przegrałeś, spróbuj jeszcze raz!');
+        }
+        if(agrComputerMove =='obcęgi' && agrPlayerMove == 'obcęgi'){
+            printMessage('Remis, spróbuj jeszcze raz :D');
+        }
+        if(agrComputerMove =='kamień' && agrPlayerMove == 'kamień'){
+            printMessage('Remis, spróbuj jeszcze raz :D');
+        }
+        if(agrComputerMove =='papier' && agrPlayerMove == 'papier'){
+            printMessage('Remis, spróbuj jeszcze raz :D');
+        }
+        if(agrComputerMove =='kamień' && agrPlayerMove == 'nieznany ruch'){
+            printMessage('Nieznany ruch');
+        }
+        if(agrComputerMove =='papier' && agrPlayerMove == 'nieznany ruch'){
+            printMessage('Nieznany ruch');
+        }
+        if(agrComputerMove =='obcęgi' && agrPlayerMove == 'nieznany ruch'){
+            printMessage('Nieznany ruch');
+        }
+    }
+displayResult(computerMove,playerMove);
+        
     //printMessage(Math.random());
-if( randomNumber =='1' && playerInput == '2'){
+/*if( randomNumber =='1' && playerInput == '2'){
     printMessage('Ty wygrywasz!');
 }
 if( randomNumber =='2' && playerInput == '3'){
@@ -79,4 +138,4 @@ if(randomNumber =='2' && playerInput == 'nieznany ruch'){
 }
 if(randomNumber =='3' && playerInput == 'nieznany ruch'){
     printMessage('Nieznany ruch');
-}
+}*/
