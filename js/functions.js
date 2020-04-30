@@ -5,9 +5,5 @@ function printMessage(msg){
 }
 
 function clearMessages(){
-	document.getElementById('messages').appendChild(div);
-}
-
-function clesrMessages(){
 	document.getElementById('messages').innerHTML = '';
 }
