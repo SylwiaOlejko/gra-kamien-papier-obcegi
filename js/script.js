@@ -1,3 +1,4 @@
+{
 function playGame(playerInput){
     clearMessages ();
     //let computerMove = 'kamień';
@@ -159,3 +160,6 @@ function(){
     console.log('klik nozyce');
     playGame(3);
   });
+}
+
+
