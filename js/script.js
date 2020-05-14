@@ -22,16 +22,7 @@ function playGame(playerInput){
     console.log('Gracz wpisał: ' + playerInput);
     
     let playerMove = getMoveName(playerInput);
-        /*if(playerInput == '1'){
-            playerMove = 'kamień';
-        }
-        if(playerInput == '2'){
-            playerMove = 'papier';
-            //location.reload();
-        }
-        if(playerInput == '3'){
-            playerMove = 'obcęgi';
-        }*/
+        
         
     printMessage('Twój ruch to: ' + playerMove);
 
